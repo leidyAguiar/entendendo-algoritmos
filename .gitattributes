@@ -1,0 +1,2 @@
+git branch -M master/mvnw text eol=lf
+*.cmd text eol=crlf
