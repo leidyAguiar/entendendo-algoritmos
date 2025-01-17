@@ -1,6 +1,6 @@
 package com.example.entendendo_algoritmos.capitulo01;
 
-public class BuscaSequencial {
+public class PesquisaSimples {
     public static void main(String[] args) {
 
         int[] lista = {1, 3, 5, 7, 9};

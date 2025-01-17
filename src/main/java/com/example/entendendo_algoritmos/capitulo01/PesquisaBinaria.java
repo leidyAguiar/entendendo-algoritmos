@@ -5,11 +5,11 @@ public class PesquisaBinaria {
 
         int[] lista = {1, 3, 5, 7, 9};
 
-        System.out.println(pesquisa_binaria(lista, 3));
-        System.out.println(pesquisa_binaria(lista, -1));
+        System.out.println(pesquisaBinaria(lista, 3));
+        System.out.println(pesquisaBinaria(lista, -1));
     }
 
-    public static int pesquisa_binaria(int[] lista, int elemento) {
+    public static int pesquisaBinaria(int[] lista, int elemento) {
         int inicio = 0;
         int fim = lista.length - 1;
         int meio, chute;

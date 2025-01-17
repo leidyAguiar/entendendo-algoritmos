@@ -1,12 +1,55 @@
-A pesquisa binária só funciona quando a sua lista está ordenada.
+### Definição:
+O capítulo 1 aborda pesquisa binária e pesquisa simples(sequencial) e mostra como um algoritmo pode acelerar o seu código.
+
+[Pesquisa Simples] Este algoritmo percorre o array que contém os dados da primeira até a última posição.
+- A necessidade de percorrer todo o array.
+
+O(n) - [Tempo de execução - Pesquisa Simples] Na pesquisa simples, a primeira abordagem seria verificar número por numero. Se fosse uma lista de 128 números, precisaríamos de 128 tentativas no pior dos casos, ou seja, se o número for o último da lista.
+O número máximo de tentativas é igual ao tamanho da lista. Isso é chamado de **tempo linear**.
+
+O(log n) - [Tempo de execução - Pesquisa Binária] Na pesquisa binária se a lista tem 128 números, precisa-se de, no máximo, sete tentativas no pior dos casos, ou seja, se o elemento estiver no final da lista.
+A pesquisa binária é executada com **tempo logarítmico**.
+
+**Logaritmos - Exemplos**
+
+2⁷ = 128 <---> log₂128 = 7
+
+2⁷ = 2 elevado a 7 potência = 128
+
+Exemplo: Pesquisa Simples
+
+```java
+public class PesquisaSimples {
+    public static void main(String[] args) {
+
+        int[] lista = {1, 3, 5, 7, 9};
+
+        System.out.println(buscaSequencial(lista, 5));
+        System.out.println(buscaSequencial(lista, 9));
+        System.out.println(buscaSequencial(lista, 2));
+    }
+
+    public static int buscaSequencial(int[] array, int elemento) {
+        // Itera sobre a lista para buscar o elemento no índice.
+        for (int i = 0; i < array.length; i++) {
+            if (elemento == array[i]) // Para cada iteração do array, compara se a o elemento é igual a posição atual
+                return i; // Se os valores são iguais, a busca termina
+        }
+        return -1; // Se o elemento não existir na lista, retorna -1 (Não encontrado)
+    }
+}
+```
+
+[Pesquisa Binária] Só funciona quando a sua lista está ordenada.
 
 - O(log n) [Pesquisa Binária] - também conhecido como ***tempo logarítmico***.
 - O(n) [Pesquisa Simples] - conhecido como ***tempo linear***.
+- O(log n) é mais rápido do que O(n), e O(log n) fica ainda mais rápido conforme a lista aumenta.
 
 Quando você procura um elemento usando a pesquisa simples, no pior dos casos, terá de analisar elemento por elemento, passando por todos.
 Por exemplo, se for uma lista de 16 elementos, precisa checar no máximo os 16 números.
 Na pesquisa binária, precisa verificar log n elementos no pior dos casos.
-Para uma lista de 16 elementos, log 16 == 4, porque 2 elevado a 4 é igual a 16. Para essa lista, precisaria passar por, no máximo, 4 tentativas.
+Para uma lista de 16 elementos, log₂16 = 4, porque 2 elevado a 4 é igual a 16. Para essa lista, precisaria passar por, no máximo, 4 tentativas.
 
 ```java
 public class PesquisaBinaria {
