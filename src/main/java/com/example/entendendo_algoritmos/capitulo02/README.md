@@ -1,4 +1,5 @@
-### Definição: 
+### Definição:
+O capítulo 2 aborda arrays e listas encadeadas - dois tipos de estrutura básica e explica seus prós e contras de ambas as estruturas para que possa decidir qual é a ideal para o seu algorítmo.
 
 [Ordenação por Seleção] Consiste na tarefa de organizar um conjunto de dados ou uma coleção (ex: array), seguindo uma determinada ordem predefinida.
 
@@ -56,17 +57,17 @@ public class OrdenacaoPorSelecao2 {
     }
 
     public static void ordenacaoPorSelecao(int[] array) {
-        int i, j, menor;
+        int i, menor, j, aux;
         // Loop externo que percorre cada elemento do array
-        for (int i = 0; i < array.length; i++) {
+        for (i = 0; i < array.length; i++) {
             menor = i; // Inicializa a variável 'menor' com o índice atual
             
             // Loop interno que percorre os elementos subsequentes ao índice atual
-            for (int j = i + 1; j < array.length; j++) {
+            for (j = i + 1; j < array.length; j++) {
                 // Verifica se o elemento atual é menor que o elemento no índice 'menor'
                 if (array[j] < array[menor]) {
                     // Se for, troca os elementos de posição
-                    int aux = array[j];
+                    aux = array[j];
                     array[j] = array[menor];
                     array[menor] = aux;
                 }
@@ -75,3 +76,11 @@ public class OrdenacaoPorSelecao2 {
     }
 }
 ```
+
+Bibliografia:
+
+Aditya, Y. Bhargava. Título: Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos. Primeira Edição. Brasil, publicação traduzida em português: Editora Novatec, abril 2017.
+
+Disponível em:
+
+[![Amazon](https://img.shields.io/badge/amazon-52b5f7?style=for-the-badge&logo=amazon&logoColor=white)](https://www.amazon.com.br/Entendendo-Algoritmos-Ilustrado-Programadores-Curiosos/dp/8575225634)

@@ -10,12 +10,12 @@ public class OrdenacaoPorSelecao2 {
     }
 
     public static void ordenacaoPorSelecao(int[] array) {
-        int i, j, menor;
+        int i, menor, j, aux;
         for (i = 0; i < array.length; i++) {
             menor = i;
             for (j = i + 1; j < array.length; j++) {
                 if (array[j] < array[menor]) {
-                    int aux = array[j];
+                    aux = array[j];
                     array[j] = array[menor];
                     array[menor] = aux;
                 }
