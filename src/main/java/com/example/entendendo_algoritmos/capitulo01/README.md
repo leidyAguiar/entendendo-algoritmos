@@ -22,6 +22,7 @@ Exemplo: Pesquisa Simples
 public class PesquisaSimples {
     public static void main(String[] args) {
 
+            // índice  0, 1, 2, 3, 4
         int[] lista = {1, 3, 5, 7, 9};
 
         System.out.println(buscaSequencial(lista, 5));
@@ -31,7 +32,9 @@ public class PesquisaSimples {
 
     public static int buscaSequencial(int[] array, int elemento) {
         // Itera sobre a lista para buscar o elemento no índice.
-        for (int i = 0; i < array.length; i++) {
+        // array.length = 5
+        // array.length - 1 = 4
+        for (int i = 0; i <= array.length - 1; i++) {
             if (elemento == array[i]) // Para cada iteração do array, compara se a o elemento é igual a posição atual
                 return i; // Se os valores são iguais, a busca termina
         }
@@ -65,7 +68,7 @@ public static void main(String[] args) {
 
     public static int pesquisa_binaria(int[] lista, int elemento) {
         int inicio = 0; // índice inicial
-        int fim = lista.length - 1; // Calculando o índice do meio da lista
+        int fim = lista.length - 1; // Fim recebe (tamanho da lista - 1), ou seja, 5 - 1 = 4 (índice do último elemento do array)
         int meio, chute; // meio é o índice central e chute é o valor do elemento a ser encontrado
 
         while (inicio <= fim) { // Enquanto existir elementos a serem procurados na lista
@@ -134,7 +137,7 @@ if (chute == elemento)
 return meio;
 
 if (chute == elemento) // Se 3 == 3
-    return meio; //Encontramos 3 no índice 1
+    return meio; // Encontramos 3 no índice 1
 if (chute > elemento)
     fim = meio - 1;
 else (chute < elemento)

@@ -11,7 +11,7 @@ public class PesquisaSimples {
     }
 
     public static int buscaSequencial(int[] array, int elemento) {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i <= array.length - 1; i++) {
             if (elemento == array[i])
                 return i;
         }
